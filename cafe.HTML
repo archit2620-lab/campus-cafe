@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Café</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fffdf8;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 7rem 2rem;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1, header p, .hero-btn {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+    .hero-btn {
+      margin-top: 1.5rem;
+      background: #ffcc70;
+      color: #333;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero-btn:hover {
+      background: #ffb347;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #6b4226;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .menu-item {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 0.8rem;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      font-style: italic;
+    }
+    footer {
+      background: #8b5e3c;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Campus Café</h1>
+    <p>Fresh Brews, Cozy Vibes & Great Conversations</p>
+    <a href="#menu" class="hero-btn">☕ View Our Menu</a>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Campus Café</h2>
+    <p>Campus Café is the heart of student life – a cozy hub for coffee lovers, friends, and dreamers. Whether you’re taking a study break, catching up with friends, or just want a great cup of coffee, our café is your perfect spot.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Special Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Rich espresso with steamed milk & foam.</p>
+        <strong>₹150</strong>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Latte">
+        <h3>Latte</h3>
+        <p>Creamy coffee with smooth flavor.</p>
+        <strong>₹170</strong>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1589308078053-f1a3c7b7e024?auto=format&fit=crop&w=600&q=80" alt="Blueberry Muffin">
+        <h3>Blueberry Muffin</h3>
+        <p>Freshly baked, soft & sweet.</p>
+        <strong>₹90</strong>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1590080876135-61ad60a2d82d?auto=format&fit=crop&w=600&q=80" alt="Cold Coffee">
+        <h3>Iced Cold Coffee</h3>
+        <p>Refreshing chilled coffee blend.</p>
+        <strong>₹160</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Established in 2025, Campus Café is not just about coffee – it’s about creating memories. Our passion is to serve freshly brewed coffee, handcrafted drinks, and delicious snacks that bring people together in a warm, inviting space.</p>
+  </section>
+
+  <section id="reviews">
+    <h2>What Students Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        “The best café on campus! Perfect for late-night study sessions with friends.”
+        <br><br><strong>- Priya S.</strong>
+      </div>
+      <div class="testimonial">
+        “Love the vibe here. Their cappuccino keeps me alive during exams.”
+        <br><br><strong>- Arjun M.</strong>
+      </div>
+      <div class="testimonial">
+        “Friendly staff, cozy seating, and amazing muffins. My go-to spot!”
+        <br><br><strong>- Neha K.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Find Us</h2>
+    <p>📍 123 Campus Road, Your City</p>
+    <p>📞 +91 98765 43210</p>
+    <p>⏰ Open: 8 AM – 10 PM</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Campus Café | Follow us on Instagram @campuscafe</p>
+  </footer>
+
+</body>
+</html
